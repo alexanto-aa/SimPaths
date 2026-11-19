@@ -3705,6 +3705,7 @@ public class SimPathsModel extends AbstractSimulationManager implements EventLis
             }
 
             // close database connection
+            txn.commit(); // missing added on 19/11/2026
             em.close();
         } catch (Exception e) {
             if (txn != null) {
